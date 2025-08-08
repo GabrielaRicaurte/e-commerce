@@ -35,3 +35,31 @@ if (document.readyState === 'loading') {
 } else {
   registerThemeToggle();
 }
+
+// Inicialización de Splide para el header (si existe el slider en el DOM)
+const initHeaderSplide = () => {
+  if (typeof Splide === 'undefined') return; // asegurar que la librería esté cargada (CDN en layout)
+  const slider = document.querySelector('.splide');
+  if (!slider || slider.__splideBound) return;
+  slider.__splideBound = true;
+  slider.classList.add('is-initializing');
+  const splide = new Splide(slider, {
+    type: 'fade', // Cambiar a 'loop' para desplazamiento horizontal
+    rewind: true,
+    arrows: false,
+    autoplay: true,
+    interval: 6000,
+    speed: 600,
+    pauseOnHover: true,
+    pagination: false,
+    easing: 'cubic-bezier(.65,.05,.36,1)'
+  });
+  splide.on('mounted', () => slider.classList.remove('is-initializing'));
+  splide.mount();
+};
+
+if (document.readyState === 'loading') {
+  window.addEventListener('DOMContentLoaded', initHeaderSplide);
+} else {
+  initHeaderSplide();
+}

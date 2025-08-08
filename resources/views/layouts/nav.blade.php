@@ -1,7 +1,7 @@
-<header class="top-0 z-50 fixed inset-x-0 flex flex-wrap sm:flex-nowrap sm:justify-start bg-[#DADADA] dark:bg-neutral-900 py-3 w-full text-sm">
+<header class="top-0 z-50 fixed inset-x-0 flex flex-wrap sm:flex-nowrap sm:justify-start bg-[#DADADA] md:bg-white dark:bg-neutral-900 py-6 w-full text-sm">
     <nav class="sm:flex sm:justify-between sm:items-center mx-auto px-4 w-full max-w-[85rem]">
         <div class="flex justify-between items-center">
-            <a class="flex-none focus:opacity-80 focus:outline-hidden font-semibold text-[#FF6600] dark:text-white text-xl"
+            <a class="flex-none focus:opacity-80 px-3 focus:outline-hidden font-bold text-[#FF6600] dark:text-white text-xl"
                 href="#" aria-label="Brand">
                 E-commerce
             </a>
