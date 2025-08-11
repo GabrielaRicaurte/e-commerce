@@ -1,7 +1,8 @@
-<header class="top-0 z-50 fixed inset-x-0 flex flex-wrap sm:flex-nowrap sm:justify-start bg-[#DADADA] md:bg-white dark:bg-neutral-900 py-6 w-full text-sm">
-    <nav class="sm:flex sm:justify-between sm:items-center mx-auto px-4 w-full max-w-[85rem]">
+<header
+    class="top-0 z-50 fixed inset-x-0 flex flex-wrap sm:flex-nowrap sm:justify-start bg-[#DADADA] md:bg-white dark:bg-neutral-900 py-6 w-full text-sm">
+    <nav class="sm:flex sm:justify-between sm:items-center mx-auto lg:mx-auto px-4 w-full lg:w-9/12">
         <div class="flex justify-between items-center">
-            <a class="flex-none focus:opacity-80 px-3 focus:outline-hidden font-bold text-[#FF6600] dark:text-white text-xl"
+            <a class="flex-none focus:opacity-80 px-3 focus:outline-hidden font-bold text-primary dark:text-white text-3xl"
                 href="#" aria-label="Brand">
                 E-commerce
             </a>
@@ -33,15 +34,24 @@
             aria-labelledby="hs-navbar-example-collapse">
             <div class="flex sm:flex-row flex-col sm:justify-end sm:items-center gap-5 mt-5 sm:mt-0 sm:ps-5">
                 {{-- Links --}}
-                <a class="focus:outline-hidden font-medium text-[#FF6600]" href="#" aria-current="page">Home</a>
-                <a class="focus:outline-hidden font-medium text-gray-600 hover:text-[#FF6600] focus:text-gray-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500 dark:text-neutral-400"
+                <a class="focus:outline-hidden font-bold text-primary text-lg" href="#" aria-current="page">Home</a>
+                <a class="focus:outline-hidden font-medium text-gray-600 hover:text-primary focus:text-gray-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500 dark:text-neutral-400 text-lg"
                     href="#">Productos</a>
-                <a class="focus:outline-hidden font-medium text-gray-600 hover:text-[#FF6600] focus:text-gray-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500 dark:text-neutral-400"
+                <a class="focus:outline-hidden font-medium text-gray-600 hover:text-primary focus:text-gray-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500 dark:text-neutral-400 text-lg"
                     href="#">Contactanos</a>
+
+
+                {{-- Redes --}}
+                <div>
+                    <a class="text-primary focus:text-gray-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500 dark:text-neutral-400 text-lg"
+                        href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a class="text-primary focus:text-gray-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500 dark:text-neutral-400 text-lg"
+                        href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
 
                 {{-- Theme Toggle --}}
                 <button id="themeToggle" type="button" aria-label="Cambiar tema"
-                    class="inline-flex justify-center items-center bg-white hover:bg-gray-50 dark:bg-transparent dark:hover:bg-white/10 disabled:opacity-50 border border-gray-200 dark:border-neutral-700 rounded-lg focus:outline-hidden size-9 text-gray-700 dark:text-neutral-200 disabled:pointer-events-none">
+                    class="inline-flex justify-center items-center bg-white hover:bg-primary/50 dark:bg-transparent dark:hover:bg-white/10 disabled:opacity-50 border border-gray-200 dark:border-neutral-700 rounded-lg rounded-primary focus:outline-hidden size-9 text-gray-700 hover:text-white dark:text-neutral-200 hover:cursor-pointer disabled:pointer-events-none">
                     <!-- Icono Luna (mostrar en tema claro) -->
                     <svg class="dark:hidden block size-4" xmlns="http://www.w3.org/2000/svg" fill="none"
                         viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">

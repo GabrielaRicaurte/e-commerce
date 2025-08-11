@@ -1,5 +1,6 @@
 import './bootstrap';
 import 'preline';
+// import 'aos/dist/aos.css';
 
 // Tema: aplicar preferencia inicial y alternar
 const THEME_KEY = 'theme';
@@ -48,9 +49,10 @@ const initHeaderSplide = () => {
     rewind: true,
     arrows: false,
     autoplay: true,
-    interval: 6000,
-    speed: 600,
-    pauseOnHover: true,
+    interval: 3500,
+    speed: 800,
+    perPage: 1,
+    pauseOnHover: false,
     pagination: false,
     easing: 'cubic-bezier(.65,.05,.36,1)'
   });
@@ -63,3 +65,10 @@ if (document.readyState === 'loading') {
 } else {
   initHeaderSplide();
 }
+
+AOS.init({
+    duration: 800,
+    easing: 'ease-in-out',
+    once: false, // Permite que la animación ocurra cada vez que el elemento entra en vista
+    mirror: true // La animación se repite al hacer scroll hacia arriba
+});

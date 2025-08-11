@@ -30,25 +30,25 @@
     class="mb-10">
     <div class="flex flex-col justify-center items-center gap-8 mx-auto mt-10 px-5 py-12 rounded-xl md:w-6/12 max-w-3xl">
         <!-- Avatares modo teléfono (default) -->
-        <div class="md:hidden flex flex-row justify-center gap-4">
+        <div class="md:hidden flex flex-row justify-center gap-4" >
             <template x-for="(persona, index) in personas" :key="index">
                 <img :src="persona.imagen" :alt="'Foto de ' + persona.nombre"
                     class="shadow-md border-4 rounded-full w-25 h-25 object-cover transition-all duration-200 cursor-pointer"
-                    :class="selected === index ? 'border-[#FF6600] scale-105 ring-2 ring-[#FF6600]' : 'border-gray-200'"
+                    :class="selected === index ? 'border-primary scale-105 ring-2 ring-primary' : 'border-gray-200'"
                     @click="selected = index">
             </template>
         </div>
         <!-- Tarjetas modo grande (md y arriba) -->
-        <div class="hidden md:flex md:flex-row md:justify-center md:gap-8 md:w-[full]">
+        <div class="hidden md:flex md:flex-row md:justify-center md:gap-8 md:w-[full]" data-aos="fade-up">
             <template x-for="(persona, index) in personas" :key="index">
                 <div class="flex flex-col items-center bg-white shadow-md p-6 rounded-xl w-80 transition-all duration-200 cursor-pointer"
-                    :class="selected === index ? 'border-2 border-[#FF6600] scale-105 ring-2 ring-[#FF6600]' :
+                    :class="selected === index ? 'border-2 border-primary scale-105 ring-2 ring-primary' :
                         'border border-gray-200'"
                     @click="selected = index">
                     <img :src="persona.imagen" :alt="'Foto de ' + persona.nombre"
                         class="shadow-md mb-4 border-4 rounded-full w-30 h-30 object-cover"
-                        :class="selected === index ? 'border-[#FF6600]' : 'border-gray-200'">
-                    <h2 class="mb-1 font-bold text-[#FF6600] text-xl" x-text="persona.nombre"></h2>
+                        :class="selected === index ? 'border-primary' : 'border-gray-200'">
+                    <h2 class="mb-1 font-bold text-primary text-xl" x-text="persona.nombre"></h2>
                     <p class="mb-2 font-semibold text-gray-700 text-base" x-text="persona.cargo"></p>
                     <p class="mb-2 text-gray-600 text-sm leading-relaxed" x-text="persona.descripcion"></p>
                 </div>
@@ -56,7 +56,7 @@
         </div>
         <!-- Info del seleccionado solo en móvil -->
         <div class="md:hidden flex flex-col items-center text-center">
-            <h2 class="mb-1 font-bold text-[#FF6600] text-2xl" x-text="personas[selected].nombre"></h2>
+            <h2 class="mb-1 font-bold text-primary text-2xl" x-text="personas[selected].nombre"></h2>
             <p class="mb-2 font-semibold text-gray-700 text-lg" x-text="personas[selected].cargo"></p>
             <p class="mb-2 text-gray-600 text-base leading-relaxed" x-text="personas[selected].descripcion"></p>
         </div>
